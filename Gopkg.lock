@@ -4,8 +4,8 @@
 [[projects]]
   name = "github.com/Microsoft/go-winio"
   packages = ["."]
-  revision = "67921128fb397dd80339870d2193d6b1e6856fd4"
-  version = "v0.4.8"
+  revision = "97e4973ce50b2ff5f09635a57e2b88a037aae829"
+  version = "v0.4.11"
 
 [[projects]]
   name = "github.com/docker/distribution"
@@ -46,29 +46,14 @@
     "sockets",
     "tlsconfig"
   ]
-  revision = "3ede32e2033de7505e6500d6c868c2b9ed9f169d"
-  version = "v0.3.0"
+  revision = "7395e3f8aa162843a74ed6d48e79627d9792ac55"
+  version = "v0.4.0"
 
 [[projects]]
   name = "github.com/docker/go-units"
   packages = ["."]
   revision = "47565b4f722fb6ceae66b95f853feed578a4a51c"
   version = "v0.3.3"
-
-[[projects]]
-  name = "github.com/go-redis/redis"
-  packages = [
-    ".",
-    "internal",
-    "internal/consistenthash",
-    "internal/hashtag",
-    "internal/pool",
-    "internal/proto",
-    "internal/singleflight",
-    "internal/util"
-  ]
-  revision = "83fb42932f6145ce52df09860384a4653d2d332a"
-  version = "v6.12.0"
 
 [[projects]]
   name = "github.com/pkg/errors"
@@ -85,17 +70,17 @@
     "internal/socks",
     "proxy"
   ]
-  revision = "4cb1c02c05b0e749b0365f61ae859a8e0cfceed9"
+  revision = "26e67e76b6c3f6ce91f7c52def5af501b4e0f3a2"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["windows"]
-  revision = "7138fd3d9dc8335c567ca206f4333fb75eb05d56"
+  revision = "d641721ec2dead6fe5ca284096fe4b1fcd49e427"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "b670764ca06c52df8f53e67d70e6ea2c85ac7344f74e3e9930c68c8a95a0d0f8"
+  inputs-digest = "3e9a71e4027788f1e64a16afbed031927057be5b4dd77e303d5822574126d5e9"
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -5,7 +5,6 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"os"
 	"strconv"
 	"time"
 
@@ -24,7 +23,7 @@ func main() {
 	}
 }
 
-func makeSpec(image string, externPort int) swarm.ServiceSpec {
+func makeSpec(image string) swarm.ServiceSpec {
 	max := uint64(1)
 
 	spec := swarm.ServiceSpec{
@@ -42,7 +41,6 @@ func makeSpec(image string, externPort int) swarm.ServiceSpec {
 			},
 			ContainerSpec: swarm.ContainerSpec{
 				Image: image,
-				Env:   []string{"GSPORT=" + strconv.Itoa(externPort)},
 				Labels: map[string]string{
 					"com.docker.stack.image":     image,
 					"com.docker.stack.namespace": "sneks_testing",
@@ -79,7 +77,7 @@ func addClient() {
 	createResponse, serviceErr :=
 		dockerClient.ServiceCreate(
 			context.Background(),
-			makeSpec("moneygames/test-client:master", currentPort),
+			makeSpec("moneygames/test-client:alpha"),
 			makeOpts())
 
 	fmt.Println(createResponse)
